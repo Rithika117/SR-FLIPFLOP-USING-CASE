@@ -37,35 +37,11 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 /* write all the steps invloved */
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: Priyadharshuni.P RegisterNumber: 212223240128
-*/
-```
-module exp6(q, q_bar, s,r, clk, reset);//SR Flip Flop Behavioral Level using ‘case’ 
-  input s,r,clk, reset;
-  output reg q;
-  output q_bar;
- 
-  always@(posedge clk) begin // for synchronous reset
-    if(!reset)       q <= 0;
-    else 
-  begin
-      case({s,r})       
-	     2'b00: q <= q; 		  // No change
-        2'b01: q <= 1'b0;		  // Write logic for reset
-        2'b10: q <= 1'b1;                      // Write logic for set
-        2'b11: q <= 1'bx;                     // Write logic for Invalid state
-      endcase
-    end
-  end
-  assign q_bar = ~q;
-endmodule
-```
+![Screenshot (210)](https://github.com/user-attachments/assets/d695f7a2-ed6b-4b99-afe1-56c3d11084e9)
 **RTL LOGIC FOR FLIPFLOPS**
-![WhatsApp Image 2024-05-07 at 08 22 42_160d38cf](https://github.com/priyadharshini210/SR-FLIPFLOP-USING-CASE/assets/148514638/3647cfc7-fbf0-49ee-b367-c3544207504c)
+![Screenshot (209)](https://github.com/user-attachments/assets/8fb3b49d-7e6e-4dde-9596-6637d2030ba6)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![WhatsApp Image 2024-05-07 at 08 22 49_708f5327](https://github.com/priyadharshini210/SR-FLIPFLOP-USING-CASE/assets/148514638/9ed4a272-67ef-4695-ace9-f81ad87d9d39)
+![Screenshot 2024-12-04 114038](https://github.com/user-attachments/assets/ea1097a3-a505-4da7-9ec9-e91b7e6faa8c)
 
-**RESULTS**
 The output of SR-FLIPFLOP-USING-CASE has been executed successfully
